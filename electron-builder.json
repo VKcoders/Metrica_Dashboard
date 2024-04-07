@@ -1,0 +1,20 @@
+{
+    "appId": "com.metrica.app",
+    "productName": "Metrica Dashboard",
+    "directories": {
+      "output": "out"
+    },
+    "win": {
+      "icon": "src/Assets/Logo.png"
+    },
+    "mac": {
+      "icon": "src/Assets/Logo.png"
+    },
+    "extraResources": [
+      {
+        "from": "dist",
+        "to": "out/dist"
+      }
+    ]
+  }
+  

@@ -1,0 +1,17 @@
+.save-block-container {
+    background-color: #6082B6;
+    width: 30%;
+    margin: 10px 0px 10px 0px;
+    border-radius: 20px;
+}
+
+#save-block-text {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.save-block-container:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}

@@ -1,0 +1,32 @@
+.create-search-status {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Status Frame */
+#create-search-status-circle {
+    border-radius: 30px;
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+}
+
+#create-search-status-bar {
+    background-color: black;
+    height: 2px;
+    width: 200px;
+}
+
+.circle-open {
+    background-color: rgb(9, 21, 255);
+}
+.circle-close {
+    background-color: black;
+}
+.circle-done {
+    background-color: rgb(171, 173, 170);
+}

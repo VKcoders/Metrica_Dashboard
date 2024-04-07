@@ -1,0 +1,18 @@
+.search-card-container {
+  cursor: pointer;
+  background-color: rgb(245, 245, 245);
+  margin: 10px;
+  width: 180px;
+  height: 200px;
+  border-radius: 20px;
+  
+  color:black;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+}
+
+.search-card-container:hover {
+  transform: scale(1.02);
+}

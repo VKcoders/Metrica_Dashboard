@@ -1,0 +1,26 @@
+.client-card-container {
+  background-color: rgb(245, 245, 245);
+  margin: 7px;
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#client-card-info {
+  color:black;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+  width: calc(95%/3);
+}
+
+.client-card-container:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background-color: rgb(228, 228, 228);
+}
