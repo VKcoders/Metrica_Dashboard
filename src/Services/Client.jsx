@@ -21,7 +21,6 @@ export const getClientById = async (id, token) => {
 };
 
 export const createClient = async (obj, token) => {
-  console.log(token)
   try {
     const { data } = await api.post( ENDPOINT, obj, { headers: { 'Authorization': token }});
     return {status: true, data};
