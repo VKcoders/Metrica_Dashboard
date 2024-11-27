@@ -1,6 +1,6 @@
 import api from "./api";
 
-const URL = '/login-manager'
+const URL = '/login/main'
 
 export const generateToken = async (obj) => {
   try {

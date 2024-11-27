@@ -1,15 +1,36 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Global as Context } from ".";
 
-function GlobalState({children}) {
-  const [credentials, setCredentials] = useState({username: "", password: ""});
-  const [token, setToken] = useState(null);
+import { generateToken } from "../Services/Token";
 
+function GlobalState({children}) {
+  const [token, setToken] = useState(null);
   const [menuIndex, setMenuIndex] = useState("All");
 
+  const navigate = useNavigate();
+
+  const loginUser = async (credentials) => {
+    try {
+      const response = await generateToken(credentials);
+      console.log(response)
+
+      if (!response.status) {
+        throw new Error()
+      }
+      
+      setToken(response.token);
+      navigate("/dashboard", { replace: true });
+    } catch (error) {
+      window.alert("Senha/Usuário Invalido");
+      throw new Error();
+    }
+    
+  }
+
   const obj = {
-    credentials, setCredentials,
     token, setToken,
+    loginUser,
     menuIndex, setMenuIndex
   };
 
