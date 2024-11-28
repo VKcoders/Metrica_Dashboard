@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const {url, prefix} = {
-  url: 'https://api.vincenzofdg.com.br',
-  prefix: "/pesquisa"
+  url: 'https://api.vkcoders.com',
+  prefix: "/metrica"
 }
 
 const api = axios.create({

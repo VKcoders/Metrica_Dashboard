@@ -36,7 +36,6 @@ function Client() {
 
   const handleSubmit = async () => {
     const {status, data} = await createClient(newClient.value, token);
-    console.log(data)
     if (!!status) {
       setNewClient({
         update: !newClient.update,

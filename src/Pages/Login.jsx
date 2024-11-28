@@ -1,27 +1,19 @@
-import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
 import { Global } from "../Context";
 
 import "../Styles/Login.css";
 import Cover from "../Assets/Cover.png";
 
-import { generateToken } from "../Services/Token";
-
 function LoginPage() {
-  const { setToken, credentials, setCredentials } = useContext(Global);
-  const navigate = useNavigate();
+  const [credentials, setCredentials] = useState({username: "", password: ""});
+  const { loginUser } = useContext(Global)
 
   const handleClick = async () => {
-    const response = await generateToken(credentials);
-
-    if (!response.status) {
-      window.alert("Senha/Usuário Invalido");
+    try {
+      await loginUser(credentials)
+    } catch {
       setCredentials(prev => ({...prev, password: ""}));
-      return;
     }
-    
-    setToken(response.token);
-    navigate("/dashboard");
   }
 
   const textInput = (name) => {
